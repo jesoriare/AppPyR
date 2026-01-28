@@ -164,6 +164,110 @@ export const preguntasYRespuestas = {
     ],
     "respuestaCorrecta": "Alemania"
   }
-]
+],
+  "motos": [
+    {
+      "pregunta": "¿Cuál es la marca de motos italiana más famosa?",
+      "respuestas": [
+        "Yamaha",
+        "Ducati",
+        "Honda",
+        "Kawasaki"
+      ],
+      "respuestaCorrecta": "Ducati"
+    },
+    {
+      "pregunta": "¿Qué tipo de motor tienen las motos de carreras MotoGP?",
+      "respuestas": [
+        "4 cilindros",
+        "6 cilindros",
+        "2 cilindros",
+        "8 cilindros"
+      ],
+      "respuestaCorrecta": "4 cilindros"
+    },
+    {
+      "pregunta": "¿Cuál es la marca japonesa de motos más grande?",
+      "respuestas": [
+        "Yamaha",
+        "Honda",
+        "Suzuki",
+        "Kawasaki"
+      ],
+      "respuestaCorrecta": "Honda"
+    },
+    {
+      "pregunta": "¿En qué año se disputó la primera carrera de MotoGP?",
+      "respuestas": [
+        "1949",
+        "1968",
+        "1982",
+        "2001"
+      ],
+      "respuestaCorrecta": "1949"
+    },
+    {
+      "pregunta": "¿Cuál es la cilindrada máxima permitida en MotoGP?",
+      "respuestas": [
+        "500cc",
+        "750cc",
+        "1000cc",
+        "1200cc"
+      ],
+      "respuestaCorrecta": "1000cc"
+    }
+  ],
+  "coches": [
+    {
+      "pregunta": "¿Cuál es la marca de coches de lujo alemana más prestigiosa?",
+      "respuestas": [
+        "BMW",
+        "Mercedes-Benz",
+        "Audi",
+        "Porsche"
+      ],
+      "respuestaCorrecta": "Mercedes-Benz"
+    },
+    {
+      "pregunta": "¿Qué compañía fabricó el primer coche eléctrico de producción masiva?",
+      "respuestas": [
+        "Tesla",
+        "Nissan",
+        "Chevrolet",
+        "BMW"
+      ],
+      "respuestaCorrecta": "Tesla"
+    },
+    {
+      "pregunta": "¿Cuál es la marca italiana de coches deportivos más famosa?",
+      "respuestas": [
+        "Lamborghini",
+        "Ferrari",
+        "Alfa Romeo",
+        "Lancia"
+      ],
+      "respuestaCorrecta": "Ferrari"
+    },
+    {
+      "pregunta": "¿En qué año se disputó la primera carrera de Fórmula 1?",
+      "respuestas": [
+        "1946",
+        "1950",
+        "1952",
+        "1960"
+      ],
+      "respuestaCorrecta": "1950"
+    },
+    {
+      "pregunta": "¿Cuál es el coche más rápido del mundo en producción?",
+      "respuestas": [
+        "Bugatti Chiron",
+        "Koenigsegg Jesko",
+        "SSC Tuatara",
+        "Hennessey Venom F5"
+      ],
+      "respuestaCorrecta": "SSC Tuatara"
+    }
+  ]
 
 }
