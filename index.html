@@ -1,124 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Cartas: Mayor o Menor</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tu archivo de estilos CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Preguntas y Respuestas</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
 </head>
-<body class="text-white">
-
-    <div id="app" class="container mx-auto p-4 max-w-4xl">
-        
-        <!-- Pantalla de inicio para crear o unirse a una partida -->
-        <div id="home-screen" class="text-center py-12">
-            <h1 class="text-4xl font-bold mb-4">Mayor o Menor Multijugador</h1>
-            <p class="text-gray-400 mb-8">Crea una partida y comparte el ID con tus amigos.</p>
-            
-            <div class="bg-gray-800 p-8 rounded-lg max-w-md mx-auto">
-                <button id="create-game-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg text-lg btn-action mb-6">
-                    Crear Nueva Partida
-                </button>
-                
-                <div class="flex items-center my-4">
-                    <hr class="flex-grow border-gray-600">
-                    <span class="px-4 text-gray-500">O</span>
-                    <hr class="flex-grow border-gray-600">
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <input type="text" id="game-id-input" placeholder="Introduce el ID de la partida" class="flex-grow bg-gray-700 text-white placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <button id="join-game-btn" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg btn-action">
-                        Unirse a la Partida
-                    </button>
-                </div>
-                 <p id="home-error" class="text-red-500 mt-4 h-5"></p>
-            </div>
-             <div class="mt-8 text-center">
-                <p class="text-gray-500">Tu ID de Jugador (para que te reconozcan):</p>
-                <p id="user-id-display-home" class="font-mono bg-gray-800 inline-block px-3 py-1 rounded-md mt-1"></p>
-            </div>
+<body>
+    <section>
+        <div id= "contenedor-pregunta">
+            <!-- <h2 class="pregunta">Selecciona el tema:</h2> -->
         </div>
 
-        <!-- Pantalla del juego -->
-        <div id="game-screen" class="hidden">
-            <div class="flex justify-between items-center mb-4">
-                <div>
-                     <h1 class="text-3xl font-bold">Partida: Mayor o Menor</h1>
-                     <div class="flex items-center gap-2 mt-2">
-                        <span class="text-gray-400">ID de la Partida:</span>
-                        <span id="game-id-display" class="font-mono bg-gray-800 px-3 py-1 rounded-md cursor-pointer" onclick="copyGameId()"></span>
-                        <span id="copy-feedback" class="text-green-400 opacity-0 transition-opacity">¡Copiado!</span>
-                     </div>
-                </div>
-                <button id="restart-game-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg btn-action">
-                    Reiniciar Partida
-                </button>
-            </div>
-
-            <!-- Zona de jugadores -->
-            <div id="players-list" class="flex justify-center gap-4 mb-6 p-4 bg-gray-800 rounded-lg">
-                <!-- Las tarjetas de jugador se insertarán aquí -->
-            </div>
-            
-            <!-- Zona de la carta -->
-            <div class="flex flex-col items-center justify-center my-8 min-h-[300px]">
-                 <p id="turn-indicator" class="text-xl mb-4 font-semibold text-center"></p>
-                 <div id="card-area" class="flex items-center justify-center gap-8">
-                    <div id="current-card-container">
-                        <!-- La carta actual se mostrará aquí -->
-                    </div>
-                 </div>
-                 <div id="game-over-message" class="hidden text-center mt-6">
-                    <h2 class="text-5xl font-bold text-yellow-400">¡Fin del Juego!</h2>
-                    <p id="winner-text" class="text-2xl mt-2"></p>
-                    <!-- NUEVO: Botón para generar burla con Gemini -->
-                    <button id="taunt-btn" class="hidden mt-4 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-lg btn-action">
-                        Burlarse de los Amigos ✨
-                    </button>
-                </div>
-            </div>
-
-            <!-- Zona de controles -->
-            <div id="controls" class="flex justify-center gap-6 my-6">
-                <button id="higher-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-2xl btn-action">Mayor</button>
-                <button id="lower-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-2xl btn-action">Menor</button>
-            </div>
-            
-            <!-- Registro de la partida -->
-            <div>
-                <h3 class="font-semibold text-lg mb-2">Registro de la Partida</h3>
-                <div id="game-log" class="game-log text-sm text-gray-300">
-                    <!-- Los mensajes del juego se insertarán aquí -->
-                </div>
-            </div>
+        <div id= "contenedor-opciones">
+            <!-- <p class="opcion">Capitales</p>
+            <p class="opcion">Programacion</p> -->
         </div>
+    </section>
+    <div id="contenedor-resultado"></div>
 
-    </div>
 
-    <!-- Modal de mensaje -->
-    <div id="message-modal" class="modal-backdrop hidden">
-        <div class="modal-content text-center">
-            <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
-            <p id="modal-message-text" class="text-lg mb-4"></p>
-            <!-- NUEVO: Contenedor para la burla generada -->
-            <div id="taunt-container" class="hidden w-full">
-                <textarea id="taunt-textarea" readonly class="w-full h-40 bg-gray-900 text-gray-300 rounded-md p-3 mb-4 focus:outline-none"></textarea>
-                <button id="copy-taunt-btn" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg">Copiar al portapapeles</button>
-            </div>
-            <button id="modal-close-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg mt-6">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- Tu archivo JavaScript -->
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
