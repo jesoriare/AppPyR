@@ -1,0 +1,97 @@
+/* Reseteo de espacios */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --color-fondo: #313e51;
+    --color-pregunta: #bdd72d;
+    --color-fondo-opcion: #3c4c67;
+    --color-opcion: #c5bfbf;
+    --color-opcion-hover: #000;
+    --tamaño-pregunta: 3rem;
+    --tamaño-opcion: 2rem;  
+}
+
+/* fuente */
+@font-face {
+    font-family: "Copperplate";
+    src: url('./assets/fonts/Copperplate.otf');
+}
+
+body{
+    background-color: var(--color-fondo);
+    font-family: 'Copperplate';
+    color: white;
+}
+
+
+.pregunta{
+   color: var(--color-pregunta); 
+   font-size: var(--tamaño-pregunta);
+   margin: 8px 8px 32px;
+}
+
+.opcion{
+    background-color: var(--color-fondo-opcion);
+    margin: 8px;
+    padding: 4px;
+    font-size: var(--tamaño-opcion);
+    cursor: pointer;
+    &:hover{
+        background-color: var(--color-pregunta);
+        color: var(--color-opcion-hover);
+    }
+}
+
+
+.correcta::after{
+    content: '✔';
+    margin-left: 16px;
+}
+
+.incorrecta::after{
+    content: '❌';
+    margin-left: 16px;
+}
+
+@keyframes parpadeo {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.correcta, .incorrecta{
+    animation: parpadeo 0.3s ease-in-out 1;
+}
+
+.total{
+    color: var(--color-opcion);
+    text-align: center;
+    margin: 8px 8px 32px;
+    font-size: var(--tamaño-pregunta);
+}
+
+.contenedor-boton{
+    text-align: center;
+}
+
+#reiniciarBtn{
+    background-color: var(--color-pregunta);
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: var(--tamaño-opcion);
+    &:hover{
+        border: 1px solid var(--color-pregunta);
+        background-color: var(--color-fondo);
+        color: var(--color-pregunta);
+    }
+}
+
+
+
+
