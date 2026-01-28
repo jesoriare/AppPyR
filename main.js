@@ -87,7 +87,7 @@ function mostrarResultado(){
     </h2>
     
     <div class="contenedor-boton">
-        <botton id="reiniciarBtn">Reiniciar</botton>
+        <button id="reiniciarBtn">Reiniciar</button>
     </div>
     
     `;
