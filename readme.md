@@ -4,22 +4,24 @@ Un juego interactivo de preguntas y respuestas diseñado para poner a prueba tus
 
 📌 Características
 
-🧠 Preguntas de distintas categorías (ciencia, historia, deportes, etc.)
+✅ Selección de temas de preguntas
 
 🎯 Sistema de puntuación
 
-⏱️ Temporizador (opcional)
+🧠 Preguntas cargadas desde un archivo JavaScript
 
-📊 Resultados al final de la partida
+🔄 Selección dinámica de preguntas
 
-🔄 Preguntas aleatorias en cada partida
+🖥️ Interfaz web sencilla e intuitiva
 
-💾 Fácil de ampliar con nuevas preguntas
+🖼️ Icono de la página (favicon)
+
+📁 Organización modular del código
 
 🛠️ Tecnologías utilizadas
 
-Modifica esta sección según tu proyecto:
+HTML5
 
-Lenguaje: JavaScript / Python / Java / C++ / etc.
+CSS3
 
-Entorno: Web / Consola / Móvil
+JavaScript (ES Modules)
